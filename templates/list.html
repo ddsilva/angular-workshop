@@ -1,0 +1,22 @@
+<h1>Car list</h1>
+
+<form>
+  Busca: <input type="text" ng-model="filterText">
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="car in cars | filter:filterText | orderBy:'manufacturer'">
+      <td>
+        <a href="#/car/{{car.id}}">{{car.manufacturer}} {{car.model}}</a>
+      </td>
+      <td>{{car.price | currency}}</td>
+    </tr>
+  </tbody>
+</table>

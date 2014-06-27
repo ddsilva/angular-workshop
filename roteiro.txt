@@ -1,0 +1,5 @@
+- Data Bind
+- Built-in directives
+- Module, Controller & $scope
+- Factory, services e $http
+- Router
